@@ -20,7 +20,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'BUI'
+      title: 'BUI',
       template: 'index.html'
     })
   ]

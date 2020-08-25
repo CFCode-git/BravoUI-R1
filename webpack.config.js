@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 module.exports = {
   entry: {
     index: './lib/index.tsx'
@@ -14,12 +14,20 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.s([ac])ss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader'
       },
       {
-        test:/\.svg$/,
-        loader:'svg-sprite-loader'
+        test: /\.svg$/,
+        loader: 'svg-sprite-loader'
       }
     ]
   },

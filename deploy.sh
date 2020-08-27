@@ -1,3 +1,3 @@
 #!/bin/env bash
 npm version $1 && \
-git push -u origin master
+git push -u test master

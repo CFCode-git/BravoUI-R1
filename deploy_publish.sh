@@ -1,2 +1,2 @@
 #!/bin/env bash
-git push test master:deploy
+git push test2 master:deploy

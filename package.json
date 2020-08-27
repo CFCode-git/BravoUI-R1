@@ -1,6 +1,6 @@
 {
   "name": "bui-r1111",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index",

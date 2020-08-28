@@ -1,0 +1,48 @@
+@import "../helper";
+.bui-dialog {
+  position: fixed; background: white;
+  min-width: 20em;
+  border-radius: 4px;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  &-mask {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: fade_out(black, 0.5);
+  }
+  &-header {
+    font-size:22px;
+    padding:8px 16px;
+    border-bottom:1px solid gray;
+  }
+  &-main {
+    padding:8px 16px;
+    min-height:6em;
+    background: #ebf1f5;
+  }
+  &-footer {
+    background: #ebf1f5;
+    padding:8px 16px;
+    border-bottom: 1px solid gray;
+    display:flex;
+    justify-content: flex-end;
+  }
+  &-close {
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    background: transparent;
+    width: 2em;
+    height: 2em;
+    border-radius:8px;
+    transform: translate(-120%, 120%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5c7080;
+    &:hover{
+      background: #e4e9ed;
+    }
+    > .bui-icon{
+      padding:.6em;
+    }
+  }
+}

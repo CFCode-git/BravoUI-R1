@@ -1,23 +1,20 @@
 @import '../helper';
 .bui-layout {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  &.hasAside {
+  &-header {}
+  &-content {
+    flex-grow: 1;
+  }
+  &-footer {}
+  & & { /*.bui-layout .bui-layout*/
+    flex-grow: 1;
+    flex-direction: row;
+  }
+  &-hasAside {
     flex-direction: row;
     .bui-layout {
       flex-direction: column;
     }
-  }
-  &-header {}
-  &-content {
-    flex-grow: 1;
-    border: 1px solid green;
-  }
-  &-footer {}
-  & & {
-    flex-grow: 1;
-    border: 1px solid blue;
-    flex-direction: row;
   }
 }

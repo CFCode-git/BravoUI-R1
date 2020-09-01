@@ -6,4 +6,4 @@ const ButtonExample: React.FunctionComponent = () => {
   );
 };
 
-export {ButtonExample};
+export default ButtonExample;

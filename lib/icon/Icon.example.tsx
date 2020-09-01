@@ -11,4 +11,4 @@ const IconExample: React.FunctionComponent = () => {
   );
 };
 
-export {IconExample};
+export default IconExample;

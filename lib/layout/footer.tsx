@@ -8,7 +8,9 @@ interface FooterProps extends React.HTMLAttributes<HTMLElement> {}
 const footer: React.FunctionComponent<FooterProps> = (props) => {
   const {className, ...rest} = props;
   return (
-    <div className={sc('footer', {extra: className})} {...rest}>footer</div>
+    <div className={sc('footer', {extra: className})} {...rest}>
+      {props.children}
+    </div>
   );
 };
 

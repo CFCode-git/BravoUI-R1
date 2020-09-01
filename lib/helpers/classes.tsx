@@ -8,7 +8,7 @@ interface Options {extra: string | undefined}
 
 interface ClassToggles {[Key: string]: boolean}
 
-function scopedClassMaker(prefix: string) {
+const scopedClassMaker = (prefix: string) => {
   return (name: string | ClassToggles, options?: Options) => {
     return Object
       .entries(name instanceof Object ? name : {[name]: name})
@@ -18,7 +18,7 @@ function scopedClassMaker(prefix: string) {
       .concat(options && options.extra || [])
       .join(' ');
   };
-}
+};
 
 export {scopedClassMaker};
 

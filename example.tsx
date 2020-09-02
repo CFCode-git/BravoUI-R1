@@ -5,17 +5,22 @@ import IconExample from './lib/icon/Icon.example';
 import ButtonExample from './lib/button.example';
 import DialogExample from './lib/dialog/dialog.example';
 import LayoutExample from './lib/layout/layout.example';
+import Layout, {Header, Aside, Content, Footer} from './lib/layout/Layout';
+import './example.scss';
+
+const logo = require('./logo.png');
 
 ReactDOM.render(
   <Router>
-    <div>
-      <header>
+    <Layout className="site-page">
+      <Header className="site-header">
         <div className="logo">
-          BUI
+          <img src={logo} alt="" width="48" height="48"/>
+          <span>BUI</span>
         </div>
-      </header>
-      <div>
-        <aside>
+      </Header>
+      <Layout>
+        <Aside className="site-aside">
           <h2>组件</h2>
           <ul>
             <li><Link to="/icon"> Icon </Link></li>
@@ -23,15 +28,18 @@ ReactDOM.render(
             <li><Link to="/dialog"> 对话框 </Link></li>
             <li><Link to="/layout"> 布局 </Link></li>
           </ul>
-        </aside>
-        <main>
+        </Aside>
+        <Content className="site-main">
           <Route path="/icon" component={IconExample}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
-        </main>
-      </div>
-    </div>
+        </Content>
+      </Layout>
+      <Footer className="site-footer">
+        &copy; 周啟尧
+      </Footer>
+    </Layout>
   </Router>,
   document.querySelector('#root')
 );

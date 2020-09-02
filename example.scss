@@ -7,6 +7,9 @@ a {text-decoration: none;color: inherit;}
 $padding: 16px;
 $main-color: #5658a5;
 $border-color: #ddd;
+body{
+  font-size: 16px;
+}
 .site-page {
   background: #fff;
 }
@@ -35,12 +38,19 @@ $border-color: #ddd;
     font-size: 18px;
   }
   ul {
-    padding: 0 $padding;
     min-width: 12em;
     > li {
-      padding: 8px 0;
       a {
-        color: $main-color;
+        color: #333;
+        padding: 8px  $padding;
+        display: block;
+        &:hover{
+          color:$main-color;
+        }
+        &.active{
+          background:fade_out($main-color,.7);
+          color:white;
+        }
       }
     }
   }

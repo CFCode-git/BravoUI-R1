@@ -2,6 +2,7 @@
 /.idea/
 /.vscode/
 /test-results/
+/doc/
 # Logs
 logs
 *.log
